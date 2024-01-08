@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<style>
+
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    header{
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                    url('background.jpg');
+                background-size: cover;
+                color: white;  
+                                   
+                
+                     
+    }
+    
+    nav{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0 70px;
+        font-family: 'Poppins', sans-serif;
+    }
+    .logo img{
+       
+        font-size: 6em;
+        letter-spacing: 2px;
+        font-weight: bold;
+    }
+    .menu a{
+        text-decoration: none;
+        color: white;
+        font-size: 1.2em;
+        padding: 0.5rem 1rem;
+    }
+    .menu a :hover{
+    
+          color: blue;
+    }
+    .menu a:nth-child(5){
+        background: #6ab04c;
+        border-radius: 8px;
+        margin: 0 1rem;
+    }
+    .menu i{
+        font-size: 1.5rem;
+        margin: 0 0.5rem;
+        cursor: pointer;
+    }
+    .menu a:hover{
+        background: #6ab04c;
+        border-radius: 8px;
+    }
+    .container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0 70px;
+    }
+    .left{
+        flex-basis: 60%;
+    }
+    .right{
+        flex-basis: 30%;
+    }
+    img{
+    width: 470px;
+    border-radius: 15px;
+    height: 350px;
+    margin-top: -150px;
+    margin-left: 50px;
+    background-image: none !important;
+    
+    }
+    .left h2{
+        font-family: 'Poppins',sans-serif;
+        color: #6ab04c;
+    }
+    .left h1{
+        font-family: 'kalam',cursive;
+        font-size: 3em;
+    }
+    .left p{
+        font-family: 'Poppins',sans-serif;
+        line-height: 2.5rem;
+    }
+    #hire{
+        text-decoration: none;
+        background: #6ab04c;
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        font-size: 1.5rem;
+        margin: 0 1rem;
+    }
+    #myp{
+        text-decoration: none;
+        color: white;
+        border-radius: 9px;
+        border: 1px dashed white;
+        padding: 1rem;
+    }
+    .logo{
+        color: orange;
+        font-size: xx-large;
+    }
+    .image{
+        margin-top: 40px;
+        width: 400px;
+        height: 300px;
+       
+    }
+    #bio{
+       cursor: pointer;
+       padding: 150px 70px ;
+       width: 100%;
+       height: 100%;
+       display: flex;
+       justify-content: space-between;
+       align-items: flex-start;
+       flex-wrap: wrap;
+       font-family: 'Poppins', sans-serif;
+    }
+    .leftbio{
+        flex-basis: 40%;
+    }
+    
+    .rightbio{
+        flex-basis: 60%;
+    }
+    .leftbio img{
+        width: 75%;
+        height: 670px;
+        border-radius: 8px;
+    }
+    .rightbio{
+        text-align: right;
+        padding: 0 40px ;
+    
+    }
+    .rightbio p{
+        margin: 15px 0;
+        line-height: 2.5rem;
+    }
+    .rightbio h1{
+        font-size: 3rem;
+    }
+    .info{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        text-align: left;
+    }
+    #follow{
+        text-align: center;
+    
+    }
+    #follow i{
+        color: blue;
+        font-size: 1.5rem;
+        margin: 0 0.5rem;
+    }
+    .link-h{
+       text-align: center;
+       margin-top: 3rem;
+    }
+    #cv{
+        text-decoration: none;
+        color: black;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        font-size: 1.5rem;
+        margin: 0 1rem;
+        border: 1px dashed grey;
+    }
+    #services{
+        padding: 50px 70px;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.02);
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        justify-content: space-around;
+        background-color: rgb(189, 222, 135);
+        
+    }
+    .intro h1{
+        font-size: 3rem;
+        margin-top: -140px;
+        text-decoration: underline 3px solid black;
+    }
+    .card{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 3rem;
+       
+    }
+    .cardbody{
+        flex-basis: 30%;
+        background: white;
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 80px;
+    }
+    .images1{
+        width: 30%;
+        height: 30%;
+        margin-left: -10px;
+       
+    }
+    .images2{
+        width: 30%;
+        height: 50% !important;
+        margin-left: -10px;
+        
+        
+    }
+    .images3{
+        width: 30%;
+        height: 50% !important;
+        margin-left: -10px;
+        
+    
+    }
+    .cardbody :hover{
+        font-size: 20px;
+        background: orange;
+    }
+    .intro h3{
+        margin-top: 5px;
+    }
+    #service{
+        margin-top: 200px;
+        padding: 50px 70px;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.02);
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        justify-content: space-around;
+    }
+    .background1 img{
+         width: 300px;
+         height: 300px;
+         margin-top: 20px;
+         
+    
+    }
+    .intro h3 ul{
+        list-style: none;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+    .background1 h3{
+        text-align: center;
+        font-size: 30px;
+        margin-left: 20px;
+    }
+    .background1 img:hover{
+          border-radius: 7px;
+          width: 310px;
+          height: 300px;
+          color: rgb(135, 199, 222);
+          text-align: center;
+          border: 8px solid black;
+    }
+    footer{
+        background: #6ab04c;
+        color: white;
+        font-size: 2rem;
+        padding: 0.5rem;
+        font-family: sans-serif,cursive;
+        text-align: center;
+    }
+    span{
+        color: blue;
+    }
+    .About{
+        font-size: 30px;
+        color: rgb(127, 185, 255);
+    }
+    
+    
+    
+    
+    
+</style>
+<body>
+    
+    <header>
+        <nav>
+            <div class="logo">PORTFOLIO</div>
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+                <a href="#">Hire me</a>
+
+                <i class="fa fa-search"></i>
+                <i class="fa fa-moon-o"></i>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="left">
+                <h2>HEY, I'm Sakshi Gupta </h2>
+                <h1>Frontend-Developer</h1>
+
+                <p>A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product  </p>
+
+                <br><br>
+
+                <div>
+                    <a href="#" id="hire">Hire me</a>
+                    <a href="#" id="myp">My Portfolio</a>
+                </div>
+            </div>
+            <div class="right">
+                      <img src="img.png">
+            </div>
+        </div>
+    </header>
+
+<section id="bio">
+    <div class="leftbio">
+        <img src="portfolioimage.jpg" class="image">
+    </div>
+    <div class="rightbio">
+         <div>
+            <p class="About">About Me</p>
+            <h1>A Lead UI Designer & Web Developer Based In UP</h1>
+            <p>Hello, I'm Sakshi Gupta and I work as a Web developer. I have been Working as a Web developer for quite Some time now. I believe I am a very ambitious person who loves to work on making the website work well. Werking on the web is my passion as I love to work on exciting projects </p>
+            <hr>
+         </div>
+
+         <div class="info">
+            <div>
+                <p><b>Name :</b>Sakshi Gupta</p>
+                <p><b>Email :</b>sg1801636@gmail.com</p>
+            </div>
+              <div>
+            <p><b>From :</b>Kanpur , India</p>
+            <p><b>Phone :</b>7607569365</p>
+              </div>
+         </div>
+
+         <div id="follow">
+            <p><b>Follow me on :</b>
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-whatsapp"></i>
+                <i class="fa fa-linkedin"></i>
+            </p>
+         </div>
+
+         <div class="link-h">
+            <a href="#" id="hire">Hire me</a>
+            <a href="#" id="cv">Download CV</a>
+         </div>
+    </div>
+</section>
+
+<section id="services">
+    <div class="intro">
+        
+        <h1> My Services</h1>
+        <h3>What i will do for you</h3>
+    <div class="card">
+          <div class="cardbody">
+            <div class="background">
+             <img src="html.jpeg" class="images1">
+            <h3>HTML</h3>
+            <p>HTML stands for Hyprt Text Markup Language.HTML is the standard markup language for creating Web pages.</p>
+            </div>
+          </div>
+
+            <div class="cardbody">
+             <div class="background">
+              <img src="css.jpeg" class="images2">
+            <h3>CSS</h3>
+            <p>"Cascading Style Sheets" is used to describe the look and formatting of a document written in markup language.</p>
+             </div>
+          </div>
+
+            <div class="cardbody">
+                <div class="background">
+             <img src="java.png" class="images3">
+            <h3>Javascripts</h3>
+            <p>Javascripts is a scripting language used to create and control dynamic website content used to develop web pages.</p>
+                </div>
+          </div>
+
+          
+
+    </div>    
+    </div>
+</section>
+
+
+
+
+<section id="service">
+    <div class="intro">
+        
+        <h1> PROJECTS </h1>
+        <h3><ul>Use : <li>HTML</li><li>CSS</li><li>Javascripts</li></ul></h3>
+        
+    <div class="card">
+          
+            <div class="background1">
+             <img src="project.png">
+            <h3>Calculator</h3>
+            </div>
+
+             <div class="background1">
+              <img src="project2.webp" >
+            <h3>E-commerce </h3>
+             </div>
+          
+
+             <div class="background1">
+             <img src="project3.png" >
+            <h3>Netflix-HomePage</h3>
+             </div>
+
+             <div class="background1">
+             <img src="project4.webp" >
+             <h3>Restaurant website</h3>
+             </div>
+
+             <div class="background1">
+              <img src="project5.jpeg" >
+             <h3>Survey Form</h3>
+             </div>
+
+             <div class="background1">
+             <img src="Tribute Page.jpeg">
+             <h3>Tribute Page</h3>
+             </div>
+    </div>    
+    </div>
+</section>
+
+
+<footer>
+    <span>Design By</span> SAKSHI GUPTA
+</footer>
+</body>
+</html>
+
